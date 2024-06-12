@@ -62,9 +62,26 @@ a, input, button {
     list-style: none;
 }
 .a-navigation {
+    position: relative;
     text-decoration: none;
     color: #000;
 }
+.a-survole::after {    
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+.a-survole:hover::after { 
+    width: 100%; 
+    left: 0; 
+}
+
 .input-search, .lien-contact, .section1-A-Btn, .section3-Btn {
     border: 1px solid #98989847;
     border-radius: 14px;
@@ -75,6 +92,11 @@ a, input, button {
     padding: 1.5%;
     font-size: calc(.4em + .6vw);
     background-color: transparent;
+    cursor: auto;
+    outline: none;
+}
+.input-search:focus {
+    border: .03rem solid black;
 }
 .lien-contact {
     width: 15%;
@@ -85,6 +107,21 @@ a, input, button {
     font-size: calc(.3em + .8vw);
 }
 
+.btnSurvole {
+    position: relative;
+    transition: all 0.3s ease;
+}
+.btnSurvole:hover {
+    background: #000;
+    color: #fff;
+}
+.scaleSurvole {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.scaleSurvole:hover {
+    transform: scale(1.02);
+}
 
 section {
     min-height: 100vh;
@@ -356,6 +393,7 @@ section {
             "container-avantage3 container-avantage4" 1fr
             / 1fr 1fr;
         gap: 2vw;
+        overflow: hidden;
     }
     .container-avantage {
         display: flex;
@@ -367,6 +405,7 @@ section {
         box-shadow: 1px 3px 6px #4d4d4d22;
         background-color: rgba(250, 250, 250, .2);
         padding: 1vw;
+        overflow: hidden;
     }
     .container-avantage1 { grid-area: container-avantage1; }
     .container-avantage2 { grid-area: container-avantage2; }
@@ -773,6 +812,13 @@ section {
                       / 1fr 1fr;
                     padding: 0 8vw;
                 }
+                .scalePlus {
+                    transition: all .15s linear;
+                }
+                .scalePlus:hover {
+                    transform: scale(1.01);
+                }
+                
                     .li-footerA { grid-area: li-footerA; }
                     .li-footerB { grid-area: li-footerB; }
                     .li-footerC { grid-area: li-footerC; }
@@ -811,6 +857,10 @@ section {
                 text-decoration: none;
                 color:#000;
             }
+            .footer-liens {
+                position: relative;  
+            }
+            
 
 /* .btnTop {
     position: fixed;
@@ -836,7 +886,7 @@ section {
         height: 4vw;      
     } */
 
-@media only screen and (min-width: 768px) and (max-width: 979px) {
+@media only screen and (min-width: 768px) and (max-width: 979px) and (orientation: landscape) {
 
     .ul-navigation {
         font-size: calc(.6em + .8vw);
@@ -1449,4 +1499,8 @@ section {
     .footer-Bottom {
         font-size: calc(.7vh + 1vw);
     }
+}
+
+@media screen and (max-width: 320px) {
+    /* Styles pour les écrans très compacts */
 }
