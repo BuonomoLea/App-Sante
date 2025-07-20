@@ -31,7 +31,7 @@ N’hésitez pas à ouvrir une issue ou faire une pull request sur GitHub.
 ### Phase 1
       X     Etape 1 : Structure de base PC -> HTML/ CSS sans animation ni intéractivité.
       X     Etape 2 : Structure de base Tablette -> CSS sans animation ni intéractivité.
-      X     Etape 3 : Structure de base Mobile -> CSS sans animation ni intéractivité.  -> (Grid sur plusieurs colonnes à modifier)
+      X     Etape 3 : Structure de base Mobile -> CSS sans animation ni intéractivité. (Grid sur plusieurs colonnes à modifier)
       O     Etape 4 : CSS/ JS  animation et intéractivité.
       O     Etape 5 : Améliorer l'accessibilité et les performances.
 
