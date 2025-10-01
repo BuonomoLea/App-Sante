@@ -105,6 +105,7 @@ a, input, button {
     padding: .5em 1em;
     color: #000;
     font-size: calc(.3em + .8vw);
+    overflow: hidden;
 }
 
 .btnSurvole {
