@@ -105,12 +105,13 @@ a, input, button {
     padding: .5em 1em;
     color: #000;
     font-size: calc(.3em + .8vw);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .btnSurvole {
     position: relative;
     transition: all 0.3s ease;
+    overflow: visible;
 }
 .btnSurvole:hover {
     background: #000;
@@ -543,7 +544,9 @@ section {
         .section4-Paragraphe {
             grid-area: section4-Paragraphe;
             font-size: calc(.5vh + 1vw);
+            padding-top: .5rem;
             text-align: right;
+            overflow: visible;
         }
     .section4-Right { 
         grid-area: section4-Right;
